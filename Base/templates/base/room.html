@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'base/include/head.html'%}
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-10 text-center">
+            <h3>Room Name: Room</h3>
+            <div id="video-stream" style="max-height: max-content; " class="row justify-content-center">
+                
+            </div>
+
+            <script type="text/javascript" src="{% static 'js/AgoraRTC_N-4.21.0.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

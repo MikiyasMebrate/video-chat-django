@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat</title>
+    {% include 'base/include/head.html'%}
+</head>
+
+<body>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 shadow card p-5 text-center">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-chat-2130787-1794829.png?f=webp&w=256" class="img-fluid mx-auto d-block " style="width: 100px;" alt="">
+            <h2>Welcome to Video Chat</h2>
+            <p class="text-muted">A group video calling platform for you!</p>
+            <form id="form">
+                <div class="d-grid">
+                    <button class="btn btn-primary" >Join Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let form = document.getElementById("form")
+
+
+        const handleSubmit = async(e)=>{
+            e.preventDefault()
+            window.open("/room", "_self")
+        }
+
+        form.addEventListener('submit', handleSubmit)
+    </script>
+</body>
+
+</html>
